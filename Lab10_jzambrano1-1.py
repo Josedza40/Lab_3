@@ -36,4 +36,7 @@ class WordAnalyzer:
 
 
     def print_report(self):
-        pass
+        words = sorted(self.__frequencies.keys())
+
+        for word in words:
+            print(f"{word:<15} :: {self.__frequencies[word]}")
