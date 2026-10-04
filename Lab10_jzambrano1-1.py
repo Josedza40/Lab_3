@@ -26,6 +26,9 @@ class WordAnalyzer:
                     line = line.lower()
                     line = line.translate(translator)
                     words = line.split()
+                    for word in words:
+                        self.__frequencies[word] = self.__frequencies.get(word,0) + 1    
+            return True    
             
         except FileNotFoundError as e:
             print(e)
