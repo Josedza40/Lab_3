@@ -71,6 +71,7 @@ Please select a file to analyze:
 
         if choice not in files:
             print("Invalid choice. Please select from 1-5.")
+            input("\nPress Enter to return to the menu...")
             continue
 
         print(f"\nProcessing '{files[choice].name}'...")
