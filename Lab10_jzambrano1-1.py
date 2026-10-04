@@ -41,6 +41,24 @@ class WordAnalyzer:
         for word in words:
             print(f"{word:<15} :: {self.__frequencies[word]}")
 
-analyzer = WordAnalyzer("monte_cristo.txt")
-if analyzer.process_file():
-    analyzer.print_report()
+def main():
+    base_path = Path(__file__).parent
+
+    files = {
+        "1": base_path / "monte_cristo.txt",
+        "2": base_path / "princess_mars.txt",
+        "3": base_path / "Tarzan.txt",
+        "4": base_path / "treasure_island.txt"
+    }
+    
+    menu = """
+--- Word Analyzer ---
+Please select a file to analyze:
+
+1. Monte Cristo
+2. Princess of Mars
+3. Tarzan
+4. Treasure Island
+5. Exit
+"""
+    while True:
