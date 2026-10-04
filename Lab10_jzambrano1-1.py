@@ -40,3 +40,7 @@ class WordAnalyzer:
 
         for word in words:
             print(f"{word:<15} :: {self.__frequencies[word]}")
+
+analyzer = WordAnalyzer("monte_cristo.txt")
+if analyzer.process_file():
+    analyzer.print_report()
