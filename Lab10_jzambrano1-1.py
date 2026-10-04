@@ -80,5 +80,5 @@ Please select a file to analyze:
             analyzer.print_report()
         input("\nPress Enter to continue...")
 
-    if __name__ == "__main__":
-        main()    
+if __name__ == "__main__":
+    main()    
