@@ -3,7 +3,7 @@ Program Name: Word Count
 Author: Jose Daniel Zambrano
 Purpose: Allow the user to select a text file and display the frequency
          of each word in alphabetical order.
-Starter Code: Code showed by the instructor during video presentation of the class.
+Starter Code: Based on code examples demonstrated by the instructor during the class video.
 Date: 10/03/2026
 """
 
@@ -62,3 +62,23 @@ Please select a file to analyze:
 5. Exit
 """
     while True:
+        print(menu)
+        choice = input("Enter your choice (1-5): ")
+
+        if choice == "5":
+            print("Exiting the program.")
+            break
+
+        if choice not in files:
+            print("Invalid choice. Please select from 1-5.")
+            continue
+
+        print(f"\nProcessing '{files[choice].name}'...")
+
+        analyzer = WordAnalyzer(files[choice])
+        if analyzer.process_file():
+            analyzer.print_report()
+        input("\nPress Enter to continue...")
+
+    if __name__ == "__main__":
+        main()    
