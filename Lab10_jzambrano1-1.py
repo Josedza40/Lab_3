@@ -66,7 +66,7 @@ Please select a file to analyze:
         choice = input("Enter your choice (1-5): ")
 
         if choice == "5":
-            print("Exiting the program.")
+            print("Goodbye!")
             break
 
         if choice not in files:
